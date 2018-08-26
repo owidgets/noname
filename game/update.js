@@ -1,5 +1,5 @@
 window.noname_update={
-	version:'1.9.57.1',
+	version:'1.9.58',
 	update:'1.9.56',
 	changeLog:[
 		'bug修复'
@@ -12,6 +12,7 @@ window.noname_update={
 		'card/yunchou.js',
 		'character/extra.js',
 		'game/asset.js',
+		'game/game.js',
 		'mode/boss.js'
 	]
 };

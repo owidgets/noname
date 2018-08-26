@@ -9539,6 +9539,9 @@
 					'step 0'
 					var list=event.list;
 					if(!list.length){
+						if(trigger._triggering==this){
+							delete trigger._triggering;
+						}
 						event.finish();
 						return;
 					}
@@ -21154,22 +21157,23 @@
 						next.list=list;
 						next._trigger=event;
 						next.triggername=name;
+						event._triggering=next;
 					}
 				},
 				untrigger:function(all,player){
+					var evt=this._triggering;
 					if(all){
-						this.next.length=0;
+						if(evt&&evt.list) evt.list.length=0;
 						this._triggered=5;
 					}
-					else if(player){
-						this._notrigger.add(player);
-						for(var i=0;i<this.next.length;i++){
-							if(this.next[i].player==player) this.next.splice(i--,1);
-						}
-					}
 					else{
-						for(var i=0;i<this.next.length;i++){
-							if(this.next[i]._trigger==this) this.next.splice(i--,1);
+						if(player){
+							this._notrigger.add(player);
+						}
+						if(evt&&evt.list){
+							for(var i=0;i<evt.list.length;i++){
+								if(evt.list[i][1]==player) evt.list.splice(i--,1);
+							}
 						}
 					}
 				}
