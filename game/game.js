@@ -21,8 +21,9 @@
 	var lib={
 		configprefix:'noname_0.9_',
 		versionOL:27,
-		updateURL:'https://raw.githubusercontent.com/libccy/noname',
-		mirrorURL:'https://gitlab.com/isgs/noname/raw',
+		updateURL:'https://raw.githubusercontent.com/owidgets/noname',
+		mirrorURL:'',
+		// mirrorURL:'https://gitlab.com/isgs/noname/raw',
 		hallURL:'noname.pub',
 		assetURL:'',
 		changeLog:[],
@@ -35914,7 +35915,7 @@
 						li2.innerHTML='素材版本：'+(lib.config.asset_version||'无')+'<p style="margin-top:8px"></p>';
 						li3.innerHTML='更新地址：<span>'+trimurl(lib.config.updateURL||lib.updateURL)+'</span><p style="margin-top:8px"></p>';
 						li3.style.whiteSpace='nowrap';
-						// li3.style.display='none';// coding
+						li3.style.display='none';// coding
 
 						var button1,button2,button3,button4,button5;
 
@@ -36328,7 +36329,7 @@
 							updatepx.style.whiteSpace='nowrap';
 							updatepx.style.marginTop='8px';
 							var buttonx=ui.create.node('button','访问项目主页',function(){
-								window.open('https://github.com/libccy/noname');
+								window.open('https://github.com/owidgets/noname');
 							});
 							updatepx.appendChild(buttonx);
 							ui.updateUpdate=function(){
@@ -36342,7 +36343,7 @@
 								else{
 									updatep1.style.display='';
 									updatep2.style.display='';
-									// updatep3.style.display='none'; // coding
+									updatep3.style.display='none'; // coding
 									updatepx.style.display='none';
 									updatep4.innerHTML='更新';
 								}
@@ -36366,7 +36367,7 @@
 
 						var button6=document.createElement('button');
 						button6.innerHTML='设为备用镜像';
-						// button6.style.display='none';// coding
+						button6.style.display='none';// coding
 						// button6.style.marginLeft='5px';
 						button6.onclick=function(){
 							game.saveConfig('updateURL',lib.mirrorURL);
