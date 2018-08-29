@@ -1,18 +1,11 @@
 window.noname_update={
-	version:'1.9.58',
-	update:'1.9.56',
+	version:'1.9.58.1',
+	update:'1.9.58',
 	changeLog:[
 		'bug修复'
 	],
 	files:[
-		'card/extra.js',
-		'card/guozhan.js',
-		'card/standard.js',
-		'card/swd.js',
-		'card/yunchou.js',
-		'character/extra.js',
-		'game/asset.js',
 		'game/game.js',
-		'mode/boss.js'
+		'mode/guozhan.js'
 	]
 };

@@ -524,7 +524,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 				enable:'phaseUse',
 				usable:1,
 				filterTarget:function(card,player,target){
-					return target.sameIdentityAs(player);
+					return player.sameIdentityAs(target);
 				},
 				selectTarget:-1,
 				content:function(){
@@ -1476,8 +1476,8 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 							if(result.bool){
 								player.logSkill('gzhuashen');
 								game.log(player,'替换了一张','#g化身');
-								lib.skill.gzhuashen.removeCharacter(player,result.links[0]);
 								lib.skill.gzhuashen.addCharacter(player,_status.characterlist.randomGet(),true);
+								lib.skill.gzhuashen.removeCharacter(player,result.links[0]);
 								game.delayx();
 							}
 						}

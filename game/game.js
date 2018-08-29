@@ -8485,6 +8485,7 @@
 					game.saveConfig(mode[i]+'_bannedcards',bannedcards);
 				}
 				game.saveConfig('theme','simple');
+				game.saveConfig('player_border', 'slim');
 				game.saveConfig('cards',lib.config.all.cards);
 				game.saveConfig('characters',lib.config.all.characters);
 				game.saveConfig('change_skin',false);
