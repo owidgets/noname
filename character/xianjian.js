@@ -722,7 +722,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					order:6,
 					threaten:1.4,
 					skillTagFilter:function(player){
-						if(4-(game.roundNumber-player.storage.chengxin)>0) return false;
+						if(4-(game.roundNumber-player.storage.chengxin_roundcount)>0) return false;
 						if(!_status.event.dying) return false;
 					},
 					save:true,

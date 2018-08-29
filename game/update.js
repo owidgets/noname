@@ -5,7 +5,11 @@ window.noname_update={
 		'bug修复'
 	],
 	files:[
+		'character/hearth.js',
+		'character/swd.js',
+		'character/xianjian.js',
 		'game/game.js',
+		'mode/identity.js',
 		'mode/guozhan.js'
 	]
 };

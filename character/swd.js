@@ -7601,8 +7601,13 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 				},
 				discard:false,
 				content:function(){
+					'step 0'
 					target.gain(cards,player).delay=false;
 					player.draw();
+					'step 1'
+					if(target.countCards('h')){
+						player.viewHandcards(target);
+					}
 				},
 				ai:{
 					result:{
@@ -10230,7 +10235,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 			luomei_info:'每当你使用或打出一张梅花花色的牌，你可以摸一张牌',
 			xingdian_info:'出牌阶段限一次，你可以弃置一张手牌，然后指定至多两名角色令其各弃置一张手牌',
 			yulin_info:'每当你即将受到伤害，你可以弃置一张装备牌抵消此伤害',
-			funiao_info:'出牌阶段限一次，你可以将一张手牌交给一名其他角色，然后摸一张牌',
+			funiao_info:'出牌阶段限一次，你可以将一张手牌交给一名其他角色，然后摸一张牌并观看其手牌',
 			funiao_old_info:'出牌阶段，你可以交给一名角色一张手牌，然后观看其手牌，每个阶段对一名角色只能发动一次',
 			xuehuang_info:'限定技，出牌阶段，若你没有黑色手牌，你可以展示并弃置所有手牌，每弃置一张牌视为使用一张火杀，随机指定两名敌人为目标',
 			zhuyu_info:'每当一名横置的角色即将受到伤害时，你可以弃置一张红色牌令此伤害+1并变为火属性',

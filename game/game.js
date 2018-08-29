@@ -8478,12 +8478,27 @@
 				mode.remove('brawl');
 				var banned=['yxs_luzhishen','shen_guanyu','shen_caocao','caopi','re_daqiao',
 					'daqiao','lingcao','liuzan','lusu','luxun','yanwen','zhouyu','ns_wangyue','gw_yenaifa',
-					'old_caozhen','guojia','simayi','swd_kangnalishi','hs_siwangzhiyi','hs_nozdormu','old_zhuzhi'];
+					'old_caozhen','maliang','guojia','simayi','swd_kangnalishi','hs_siwangzhiyi','hs_nozdormu','old_zhuzhi'];
 				var bannedcards=['zengbin','huoshan','hongshui','guiyoujie','fengyinzhidan','sifeizhenmian','lebu'];
+				var favs=["shen_lvmeng","shen_zhaoyun","shen_zhugeliang","ow_ana","chenlin","ns_guanlu","hs_guldan","swd_guyue",
+					"pal_jiangyunfan","mtg_jiesi","swd_lanyin","pal_liumengli","swd_muyun","pal_nangonghuang","swd_muyue","pal_murongziying",
+					"swd_qiner","pal_shenqishuang","hs_taisi","wangji","pal_xingxuan","xunyou","hs_yelise","pal_yuejinzhao","pal_yueqi",
+					"gjqt_yuewuyi","swd_yuxiaoxue","ow_zhaliya","zhangchunhua","hs_zhihuanhua","swd_zhiyin","old_zhonghui","gjqt_bailitusu",
+					"hs_barnes","ow_dva","swd_hengai","pal_jushifang","hs_kazhakusi","hs_lafamu","ow_liekong","hs_lreno","pal_mingxiu",
+					"swd_murongshi","gw_oudimu","gjqt_ouyangshaogong","hs_pyros","qinmi","gw_sanhanya","hs_selajin","swd_shuwaner",
+					"swd_situqiang","hs_xialikeer","pal_xuejian","swd_yuchiyanhong","swd_yuwentuo","swd_zhaoyun","zhugeliang","gw_aigeleisi",
+					"gw_aimin","gjqt_aruan","hs_aya","swd_cheyun","swd_chenjingchou","gw_diandian","swd_huzhongxian","hs_jinglinglong",
+					"hs_kaituozhe","hs_kalimosi","gw_linjing","ow_luxiao","re_luxun","hs_morgl","swd_sikongyu","hs_sthrall","sunquan",
+					"sunshangxiang","gw_yioufeisisp","gw_yisilinni","hs_yogg","hs_ysera","pal_yuntianhe","zhugejin","zhugeke","gw_zhuoertan",
+					"hs_anduin","swd_anka","ow_banzang","ow_chanyata","diaochan","swd_duguningke","sp_diaochan","hetaihou","ns_huamulan",
+					"swd_huanglei","swd_huanyuanzhi","re_huatuo","gw_huoge","pal_jiangcheng","yj_jushou","swd_kendi","yxs_libai",
+					"mtg_lilianna","xin_liru","liuxie","pal_lixiaoyao","pal_longkui","ns_nanhua","swd_qi","swd_septem","gw_shasixiwusi",
+					"ow_tianshi","swd_weida","gjqt_xiayize","swd_xiyan","hs_xsylvanas","hs_yelinlonghou","ow_yuanshi","zuoci"];
 				for(var i=0;i<mode.length;i++){
 					game.saveConfig(mode[i]+'_banned',banned);
 					game.saveConfig(mode[i]+'_bannedcards',bannedcards);
 				}
+				game.saveConfig('favouriteCharacter',favs);
 				game.saveConfig('theme','simple');
 				game.saveConfig('player_border', 'slim');
 				game.saveConfig('cards',lib.config.all.cards);
@@ -8492,6 +8507,8 @@
 				game.saveConfig('show_splash','off');
 				game.saveConfig('show_favourite',false);
 				game.saveConfig('animation', false);
+				game.saveConfig('hover_all', false);
+				game.saveConfig('asset_version', 'v1.9');
 				// game.saveConfig('characters',lib.config.all.characters);
 				// game.saveConfig('cards',lib.config.all.cards);
 				game.saveConfig('plays',['cardpile']);
