@@ -1733,6 +1733,9 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					event.current.classList.remove('selectedx');
 					if(event.current.side==game.me.side){
 						event.current.init(result.buttons[0].link);
+						if(event.current==game.me){
+							game.addRecentCharacter(result.buttons[0].link);
+						}
 						event.list.remove(event.current.name);
 						event.list2.remove(event.current.name);
 						if(event.current.identity=='zhu'){
@@ -1788,7 +1791,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					if(event.xdialog){
 						event.xdialog.close();
 					}
-					game.addRecentCharacter(game.me.name,game.me.name2);
+					// game.addRecentCharacter(game.me.name,game.me.name2);
 					ui.control.style.transitionDuration='0s';
 					ui.refresh(ui.control);
 					ui.arena.classList.remove('choose-character');

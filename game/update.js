@@ -1,5 +1,5 @@
 window.noname_update={
-	version:'1.9.58.1',
+	version:'1.9.58.2',
 	update:'1.9.58',
 	changeLog:[
 		'bug修复'
@@ -10,6 +10,7 @@ window.noname_update={
 		'character/xianjian.js',
 		'game/game.js',
 		'mode/identity.js',
-		'mode/guozhan.js'
+		'mode/guozhan.js',
+		'mode/versus.js',
 	]
 };

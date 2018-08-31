@@ -1154,7 +1154,7 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					else{
 						game.me.init(result.buttons[0].link)
 					}
-					game.addRecentCharacter(game.me.name,game.me.name2);
+					game.addRecentCharacter(result.buttons[0].link,result.buttons[1].link);
 					event.list.remove(game.me.name);
 					event.list.remove(game.me.name2);
 					if(game.me==game.zhu&&game.players.length>4){
