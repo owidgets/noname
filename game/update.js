@@ -1,16 +1,11 @@
 window.noname_update={
-	version:'1.9.58.2',
-	update:'1.9.58',
+	version:'1.9.58.3',
+	update:'1.9.58.2',
 	changeLog:[
 		'bug修复'
 	],
 	files:[
-		'character/hearth.js',
-		'character/swd.js',
-		'character/xianjian.js',
-		'game/game.js',
-		'mode/identity.js',
 		'mode/guozhan.js',
-		'mode/versus.js',
+		'mode/identity.js'
 	]
 };

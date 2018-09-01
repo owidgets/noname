@@ -3920,8 +3920,8 @@ game.import('mode',function(lib,game,ui,get,ai,_status){
 					}
 					if(result.buttons){
 						game.me.init(result.buttons[0].link,result.buttons[1].link,false);
+						game.addRecentCharacter(result.buttons[0].link,result.buttons[1].link);
 					}
-					game.addRecentCharacter(result.buttons[0].link,result.buttons[1].link);
 					// game.me.setIdentity(game.me.group);
 					event.list.remove(game.me.name);
 					event.list.remove(game.me.name2);
